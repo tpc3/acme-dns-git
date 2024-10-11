@@ -1,21 +1,22 @@
-pkgbase = acme-dns
+pkgbase = acme-dns-git
 	pkgdesc = DNS server for ACME dns-01 challenges
-	pkgver = 1.0
+	pkgver = r214.27e8251
 	pkgrel = 1
 	url = https://github.com/joohoi/acme-dns
 	arch = x86_64
 	license = MIT
 	makedepends = go
+	conflicts = acme-dns
 	options = !strip
 	options = !emptydirs
 	backup = etc/acme-dns/config.cfg
 	source = sysusers.conf
 	source = tmpfiles.conf
 	source = acme-dns.service
-	source = acme-dns-src-v1.0.tar.gz::https://github.com/joohoi/acme-dns/archive/v1.0.tar.gz
+	source = acme-dns-git::git+https://github.com/joohoi/acme-dns.git
 	sha256sums = edd9873e5d24736b9164467f7543dab42dc177d6c98b4ca6a572dfcbdd2202a4
 	sha256sums = e8a8b3ffda44a3c346925ba4de197f1b6f139bfe52b9f77e6cb3f87677d3ad98
 	sha256sums = dea89dea17e9f0eff9adf5af56a876ceb738d94f0281a6ece9ca841ec39cf6be
-	sha256sums = 06249831f4a448453ad4a86bb1a4bf752f1ccc0d48da25fa09f5a1cf54646d2e
+	sha256sums = SKIP
 
-pkgname = acme-dns
+pkgname = acme-dns-git
